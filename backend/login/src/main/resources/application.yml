@@ -1,0 +1,23 @@
+info:
+  name: Login project
+  artifact: '@project.artifactId@'
+  version: '@project.version@'
+
+spring:
+  application:
+    name: login
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:h2:file:./data/login_db
+    driver-class-name: org.h2.Driver
+    username: root
+    password:
+  sql:
+    init:
+      platform: org.hibernate.dialect.H2Dialect
+  h2:
+      console:
+        enabled: true
+      
